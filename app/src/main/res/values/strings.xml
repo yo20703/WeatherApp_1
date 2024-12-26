@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">WeatherApp_1</string>
+    <string name="current_location_title">當前位置</string>
+</resources>
