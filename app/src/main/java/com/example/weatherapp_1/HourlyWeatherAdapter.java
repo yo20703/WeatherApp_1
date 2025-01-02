@@ -40,6 +40,24 @@ public class HourlyWeatherAdapter
         holder.tvTime.setText(forecast.getTime());
         holder.tvTemperature.setText(forecast.getTemperature());
 
+        String condition = forecast.getWeatherCondition();
+        switch (condition.toLowerCase()) {
+            case "sunny":
+                holder.ivIcon.setImageResource(R.drawable.ic_sunny);
+                break;
+            case "cloudy":
+                holder.ivIcon.setImageResource(R.drawable.ic_cloudy);
+                break;
+            case "overcast":
+                holder.ivIcon.setImageResource(R.drawable.ic_overcast);
+                break;
+            case "rain":
+                holder.ivIcon.setImageResource(R.drawable.ic_rain);
+                break;
+            case "thunder":
+                holder.ivIcon.setImageResource(R.drawable.ic_thunder);
+                break;
+        }
     }
 
     @Override
