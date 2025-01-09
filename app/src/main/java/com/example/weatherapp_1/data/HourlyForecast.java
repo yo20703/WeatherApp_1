@@ -5,6 +5,10 @@ public class HourlyForecast {
     private String weatherCondition;        //天氣狀況
     private String temperature;             //溫度
 
+    public HourlyForecast() {
+
+    }
+
     public HourlyForecast(String time, String weatherCondition, String temperature) {
         this.time = time;
         this.weatherCondition = weatherCondition;

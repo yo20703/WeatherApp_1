@@ -9,6 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2025-01-02"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,7 +35,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/iv_icon"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="16dp"/>
+        android:layout_marginStart="16dp"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/tv_min_temp"
@@ -44,6 +46,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/iv_icon"
         app:layout_constraintTop_toBottomOf="@+id/tv_max_temp"
+        android:textColor="@color/white"
         android:layout_marginStart="16dp"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,10 @@ public class DayForecast {
     private String temperatureMin;
     private String temperatureMax;
 
+    public DayForecast() {
+
+    }
+
     public DayForecast(String date, String weather, String temperatureMin, String temperatureMax) {
         this.date = date;
         this.weather = weather;
