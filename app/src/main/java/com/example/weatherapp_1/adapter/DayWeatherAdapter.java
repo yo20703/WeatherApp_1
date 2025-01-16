@@ -1,4 +1,4 @@
-package com.example.weatherapp_1;
+package com.example.weatherapp_1.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.weatherapp_1.R;
 import com.example.weatherapp_1.data.DayForecast;
 
 import java.util.ArrayList;
@@ -50,7 +51,7 @@ public class DayWeatherAdapter extends RecyclerView.Adapter<DayWeatherAdapter.Da
             case "rain":
                 holder.ivIcon.setImageResource(R.drawable.ic_rain);
                 break;
-            case "ic_thunder":
+            case "thunder":
                 holder.ivIcon.setImageResource(R.drawable.ic_thunder);
                 break;
         }
