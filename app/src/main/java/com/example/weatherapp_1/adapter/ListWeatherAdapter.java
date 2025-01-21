@@ -69,6 +69,15 @@ public class ListWeatherAdapter extends RecyclerView.Adapter<ListWeatherAdapter.
         return weatherDataArrayList.size();
     }
 
+    public ArrayList<WeatherData> getWeatherDataArrayList() {
+        return weatherDataArrayList;
+    }
+
+    public void updateList(ArrayList<WeatherData> weatherDataArrayList) {
+        this.weatherDataArrayList = weatherDataArrayList;
+        notifyDataSetChanged();
+    }
+
     private HourlyForecast getCurrentHourlyForecast(String city) {
         for(WeatherData weatherData : weatherDataArrayList) {
             if(weatherData.getCity().equals(city)){

@@ -10,17 +10,31 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.weatherapp_1.R;
 
-public class MapActivity extends AppCompatActivity {
+import org.osmdroid.tileprovider.tilesource.XYTileSource;
+import org.osmdroid.views.MapView;
 
+public class MapActivity extends AppCompatActivity {
+    private MapView mapView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_map);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        initLayout();
+    }
+
+    private void initLayout() {
+        mapView = findViewById(R.id.mapview);
+        mapView.setUseDataConnection(false);
+        mapView.setTileSource(
+                new XYTileSource(
+                        "Google Maps HD",
+                        7,
+                        12,
+                        256,
+                        ".png",
+                        new String[] { "" }
+                )
+        );
     }
 }
